@@ -29,20 +29,20 @@ public class FelineTest {
 
     @Test
     public void houldgetFamilyFelion() {
-        String result = feline.getFamily();
-        assertEquals("Кошачьи", result);
+        String resultFamily = feline.getFamily();
+        assertEquals("Кошачьи", resultFamily);
     }
 
     @Test
-    public void shouldgetKittenswhenFelion() {
+    public void shouldGetKittensWhenFelion() {
         int actualResult = feline.getKittens();
         int expectedFood = 1;
         assertEquals("Должно быть котят: 1", expectedFood, actualResult);
     }
 
     @Test
-    public void testGetKittens() {
-        int result = feline.getKittens(10);
-        assertEquals(10, result);
+    public void shouldGetKittens() {
+        int resultKittens = feline.getKittens(10);
+        assertEquals(10, resultKittens);
     }
 }

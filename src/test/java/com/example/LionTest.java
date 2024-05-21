@@ -14,7 +14,7 @@ import static org.junit.Assert.*;
 @RunWith(MockitoJUnitRunner.class)
 public class LionTest {
     private Lion lion;
-    List<String> Meat = List.of("Животные", "Птицы", "Рыба");
+    List<String> eatMeat = List.of("Животные", "Птицы", "Рыба");
 
     @Mock
     Feline feline;
@@ -25,7 +25,7 @@ public class LionTest {
     }
 
     @Test
-    public void shoulgetKittenswhenLion() {
+    public void shouldGetKittensWhenLion() {
         Mockito.when(feline.getKittens()).thenReturn(1);
         int actualResult = lion.getKittens();
         int expectedFood = 1;
@@ -35,9 +35,9 @@ public class LionTest {
 
     @Test
     public void shouldBeLionGetFoodMeat() throws Exception {
-        Mockito.when(feline.getFood("Хищник")).thenReturn(Meat);
+        Mockito.when(feline.getFood("Хищник")).thenReturn(eatMeat);
         List<String> actualResult = lion.getFood();
-        List<String> expectedFood = Meat;
+        List<String> expectedFood = eatMeat;
         assertEquals("Должно быть: Животные, Птицы, Рыба", expectedFood, actualResult);
     }
 }
