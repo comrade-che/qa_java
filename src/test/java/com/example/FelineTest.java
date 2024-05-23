@@ -28,7 +28,7 @@ public class FelineTest {
     }
 
     @Test
-    public void houldgetFamilyFelion() {
+    public void shouldGetFamilyFelion() {
         String resultFamily = feline.getFamily();
         assertEquals("Кошачьи", resultFamily);
     }
